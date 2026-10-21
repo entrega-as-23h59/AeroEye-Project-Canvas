@@ -1,0 +1,91 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, top=1cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{english}
+\babelfont{rm}{Noto Sans}
+\babelfont{sf}{Noto Sans}
+\renewcommand{\familydefault}{\sfdefault} 
+
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+\definecolor{brandblue}{RGB}{31, 97, 141}
+\definecolor{hintgray}{RGB}{140, 140, 140}
+\definecolor{linegray}{RGB}{220, 220, 220}
+
+\begin{document}
+
+\thispagestyle{empty} 
+
+\begin{center}
+    \textcolor{brandblue}{\LARGE \textbf{Class Activity: Project Canvas}} \\[0.15cm]
+    \normalsize 
+    \textbf{Project Name:} AeroEye \hspace{1cm} 
+    \textbf{Team:} Daniel Santana, Gabriel Bernardes, Rúben Alves
+\end{center}
+\vspace{0.2cm}
+
+\arrayrulecolor{linegray}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{15pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X}
+\toprule
+\textcolor{brandblue}{\textbf{1. Problem}} \newline
+A necessidade da contratação e deslocação de um profissional de manutenção, criando despesas elevadas para problemas que podem ser simples e resolvidos por um operador com as devidas instruções.
+& 
+\textcolor{brandblue}{\textbf{2. Target users / context}} \newline
+Gestores e responsáveis de manutenção em ambiente industrial. Auxílio e monitorização contínua de maquinaria de forma autónoma. \\
+
+\midrule
+\textcolor{brandblue}{\textbf{3. Main objective}} \newline
+Redução de custos operacionais e paragens de produção através da eliminação de deslocações desnecessárias de técnicos externos.
+&
+\textcolor{brandblue}{\textbf{4. Proposed solution}} \newline
+Drone autónomo que realiza a vigilância e inspeção das máquinas da fábrica, deteta anomalias nas mesmas e alerta o responsável. \\
+
+\midrule
+\textcolor{brandblue}{\textbf{5. Emerging / intelligent tech}} \newline
+Drone autónomo com reconhecimento de anomalias via Machine Learning e acesso remoto através de VR à fábrica com possibilidade de criar anotações em ambientes visíveis com uso de AR.
+& 
+\textcolor{brandblue}{\textbf{6. Contribution of each course unit}} 
+\begin{itemize}
+    \item \textbf{AAP:} Algoritmos de Machine Learning para deteção de anomalias.
+    \item \textbf{RVA:} Realidade Aumentada para diagnóstico remoto e Realidade Aumentada para suporte à manutenção local.
+    \item \textbf{TEI:} Sistema de sensores no drone e desenvolvimento da dashboard.
+    \item \textbf{DDM:} Aplicação centralizada para visualização de relatórios e vídeos. Visualização em tempo real das câmaras/sensores do drone.
+\end{itemize} \\[2.5cm]
+
+\midrule
+\textcolor{brandblue}{\textbf{7. Main system components}} \newline
+Drone com câmara, sensores a definir, servidor centralizado para armazenamento e processamento de dados com API, óculos de Realidade Vistual, Smartphone com suporte a Realidade Aumentada, dashboard e aplicação android.
+& 
+\textcolor{brandblue}{\textbf{8. Key technology decision}}
+\begin{itemize}
+    \item \textbf{Drone autonomo \& reconhecimento de anomalias:} Python
+    \item \textbf{Web (servidor e dashboard):} Laravel e Vue
+    \item \textbf{Aplicação Movel:} Kotlin e ARCore
+    \item \textbf{VR:} Unity
+\end{itemize} \\[2.5cm]
+
+\midrule
+\textcolor{brandblue}{\textbf{9. Main project risk}} \newline
+A impossibilidade de testar o sistema num ambiente industrial real poderá limitar a validação da sua eficácia. Para mitigar este risco, serão realizados testes controlados num ambiente alternativo (a definir), com anomalias pré-definidas. Além disso, a escassez de dados de treino neste ambiente poderá comprometer a capacidade do modelo na deteção de anomalias, originando falsos positivos ou negativos.
+  &
+\textcolor{brandblue}{\textbf{10. 2--3 evaluation criteria}} 
+\begin{enumerate}
+    \item Taxa de sucesso na deteção de anomalias.
+    \item Facilidade com que um técnico consegue visualizar o problema e dar assistência para a sua resolução.
+    \item Taxa de sucesso na visualização e correta localização de anotações de Realidade Aumentada.
+
+\end{enumerate}
+  \\
+
+\bottomrule
+\end{tabularx}
+
+\end{document}
